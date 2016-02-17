@@ -127,6 +127,7 @@
 				font-size: 1em;
 				outline: 0;
 				color: #7b7b7b;
+
 			}
 
 
@@ -171,6 +172,7 @@
 	
 	#sidebar
 	{
+		float:right;
 	}
 	
 	#sidebar header h2
