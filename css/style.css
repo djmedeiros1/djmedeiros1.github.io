@@ -29,7 +29,7 @@
 	
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 		{
-			color: inherit;
+			color: white;
 			text-decoration: none;
 		}
 		
@@ -102,7 +102,9 @@
 		{
 			display: block;
 			text-transform: uppercase;
-		float left: 
+		float left; 
+		font-size:20px; 
+		font-weight:;
 		}
 		
 	footer
@@ -263,7 +265,7 @@
 	#header
 	{
 		position: relative;
-		background: #ddd url(../images/header.jpg) no-repeat center;
+		background: #ddd url(https://images.unsplash.com/photo-1431578500526-4d9613015464?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=61a9696b493598ca908aee4b874c622a) no-repeat center;
 		background-size: cover;
 	}
 
