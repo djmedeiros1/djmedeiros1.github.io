@@ -91,10 +91,10 @@
 						<div class="8u skel-cell-important">
 							<section id="content">
 								<header>
-									<h2></h2>
+									
 									<span class="byline">THE STORY OF OUR FOUNDER</span>
 								</header>
-								<p><a href="#" class="imae full"><img src="http://d13beo3f7vpmvd.cloudfront.net/wp-content/uploads/2014/03/nikemagista.jpg" alt="">
+								<p><a href="" class="image full"></a><img src="http://www.sport-kicksuk.co.uk/wordpress/wp-content/uploads/2015/11/2015-nike-hypervenom-phantom-soccer-cleats.jpg" alt="" width=""></p> 
 							</section>
 						</div>
 					<!-- /Content -->
@@ -106,14 +106,46 @@
 									<h2>About Us</h2>
 									<span class="byline">Dylan Medeiros</span>
 								</header>
-								<p>Our Company started with one child named Dylan Medeiros he had a dream to be a founder 																of a company and so he created a small website and website
-								 found it and we liked it so we asked if he would want to join our company so he joined.														 he was created the name and is now the founder of the
+								<p>Our Company started with one child named Dylan Medeiros he had a dream to be a founder of a company and so he created a small website and we found it and we liked it so we asked if he would want to join our company so he joined. he was created the name and is now the founder of the
 								 company he was 12 when we found him, now he is 21.</p>
 							</section>
 						</div>
 					<!-- Sidebar -->
 						
 				</div>
-
+<?php
+$action=$_REQUEST['action'];
+if ($action=="")    /* display the contact form */
+    {
+    ?>
+    <form  action="" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="action" value="submit">
+    Your name:<br>
+    <input name="name" type="text" value="" size="30"/><br>
+    Your email:<br>
+    <input name="email" type="text" value="" size="30"/><br>
+    Your message:<br>
+    <textarea name="message" rows="7" cols="30"></textarea><br>
+    <input type="submit" value="Send email"/>
+    </form>
+    <?php
+    } 
+else                /* send the submitted data */
+    {
+    $name=$_REQUEST['name'];
+    $email=$_REQUEST['email'];
+    $message=$_REQUEST['message'];
+    if (($name=="")||($email=="")||($message==""))
+        {
+        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
+        }
+    else{        
+        $from="From: $name<$email>\r\nReturn-path: $email";
+        $subject="Message sent using your contact form";
+        mail("Djmedeiros2002@gmail.com.com", $subject, $message, $from);
+        echo "Email sent!";
+        }
+    }  
+?>
 	</body>
 </html>
