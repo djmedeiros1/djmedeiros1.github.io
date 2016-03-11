@@ -299,6 +299,7 @@
 
 	#main
 	{
+		float: middle;
 		position: relative;
 		background: #fff url(images/overlay.png) repeat;
 	}
@@ -345,4 +346,9 @@
 	{
 		text-decoration: none;
 		color: rgba(255,255,255,.3);
+
 	}		
+	#sites
+	{
+		color: white;
+	}
